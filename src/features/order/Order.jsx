@@ -77,10 +77,11 @@ function Order() {
   );
 }
 
+// Loader to load an order before a render
 export async function loader({ params }) {
   // IIDSAT CQE92U CX8BJV
   const order = await getOrder(params.orderId);
-  console.log(order);
+
   return order;
 }
 

@@ -19,13 +19,14 @@ const router = createBrowserRouter([
       {
         path: '/order/new',
         element: <CreateOrder />,
+        // LInk the action creator to this route
         action: createOrderAction,
-        errorElement: <Error />,
       },
       {
         path: '/order/:orderId',
         element: <Order />,
         errorElement: <Error />,
+        // LInk data loader to this route
         loader: orderLoader,
       },
     ],
